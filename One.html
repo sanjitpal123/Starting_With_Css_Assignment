@@ -1,0 +1,46 @@
+<!--Create a simple page with some div tags and show different ways to add CSS as well as what happens
+when you target the same elements with inline, internal, and external CSS. Also, utilize comments in the
+project where required.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <!-- Inline styles -->
+    <style>
+        .internal {
+            color: green;
+        }
+
+        .inline__internal {
+            color: red;
+        }
+
+        .internal__ext {
+            color: brown;
+        }
+
+        .inline__internal__external {
+            color: aqua;
+        }
+    </style>
+    <!-- depending on the order external wins between internal and external since I have
+external imported after internal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="color: red;">Inline</div>
+    <div class="internal">Internal</div>
+    <div class="external">External</div>
+    <div style="color: blueviolet;" class="inline__internal">Inline + Internal</div>
+    <div class="int__external internal__ext">Internal + External</div>
+    <div style="color: blueviolet;" class="inline__internal__external">Inline + Internal +
+        External</div>
+</body>
+
+</html>
